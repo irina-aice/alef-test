@@ -1,0 +1,61 @@
+{
+  "name": "alef-test",
+  "private": true,
+  "description": "",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.0.0",
+    "autoprefixer": "^10.3.4",
+    "browser-sync": "2.26.13",
+    "del": "6.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-htmlacademy": "^4.0.2",
+    "gulp": "4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-imagemin": "7.1.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.0",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-svgstore": "7.0.1",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-webp": "4.0.1",
+    "pixel-glass": "^1.0.13",
+    "postcss": "^8.3.6",
+    "postcss-csso": "5.0.0",
+    "sass": "^1.39.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-htmlacademy": "0.1.4"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "stylelint-fix": "stylelint \"source/sass/**/*.scss\" --syntax scss --fix",
+    "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
+    "test-fix": "npm run editorconfig && npm run stylelint-fix && eslint source/js/ --fix",
+    "build": "gulp build",
+    "scripts": "gulp scripts",
+    "sprite": "gulp sprite",
+    "styles": "gulp styles",
+    "start": "gulp"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/sass/**/*.scss"
+  ],
+  "engines": {
+    "node": "14.15.0"
+  },
+  "dependencies": {
+    "gsap": "^3.8.0",
+    "modern-normalize": "^1.1.0"
+  }
+}

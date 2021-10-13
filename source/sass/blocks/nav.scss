@@ -1,0 +1,12 @@
+.nav__list {
+  @include reset-list;
+}
+
+.nav__item {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.nav__item a {
+  color: inherit;
+}

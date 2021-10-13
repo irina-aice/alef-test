@@ -1,0 +1,21 @@
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+}
+
+.card__list {
+  @include reset-list;
+}
+
+.card__price {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+}
+
+.card__button {
+  color: $white;
+  background-color: $blue;
+}

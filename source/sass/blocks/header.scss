@@ -1,0 +1,31 @@
+.header {
+  color: $white;
+  background-color: $light-black;
+}
+
+.header__wrapper {
+  @include container;
+}
+
+.header__contacts-list {
+  @include reset-list;
+}
+
+.header__contacts-item a {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  color: inherit;
+}
+
+.header__contacts-item span {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46px;
+}

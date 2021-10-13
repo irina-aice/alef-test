@@ -1,0 +1,13 @@
+.cards__list {
+  @include reset-list;
+}
+
+.cards__add-button,
+.cards__upp-button {
+  @include reset-button;
+}
+
+.cards__add-button {
+  font-size: 14px;
+  line-height: 17px;
+}
