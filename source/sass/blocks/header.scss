@@ -1,14 +1,45 @@
 .header {
+  position: relative;
   color: $white;
+}
+
+.header::before,
+.header::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header::before {
+  background-image: url("../img/header-cat.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $deep-black;
+}
+
+.header::after {
+  left: 0;
   background-color: $light-black;
 }
 
 .header__wrapper {
   @include container;
+  padding-top: 26px;
+  padding-bottom: 66px;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__contacts-list {
   @include reset-list;
+  text-align: right;
 }
 
 .header__contacts-item a {
@@ -19,12 +50,16 @@
 }
 
 .header__contacts-item span {
+  display: block;
+}
+
+.header__contacts-item span {
   font-size: 18px;
   line-height: 22px;
 }
 
 .header__title {
-  margin: 0;
+  margin: 36px 0 0 0;
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;

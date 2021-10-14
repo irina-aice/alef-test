@@ -1,0 +1,35 @@
+.back-to-top {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 49px;
+}
+
+.back-to-top__container {
+  @include container;
+  position: relative;
+}
+
+.back-to-top__button {
+  @include reset-button;
+  position: absolute;
+  display: block;
+  right: 10px;
+  bottom: 0;
+  width: 59px;
+  height: 59px;
+  background-color: $blue;
+  cursor: pointer;
+}
+
+@media (max-width: $width-only-tablet) {
+  .back-to-top__button {
+    right: 50px;
+  }
+}
+
+@media (max-width: $width-only-mobile) {
+  .back-to-top__button {
+    right: 15px;
+  }
+}

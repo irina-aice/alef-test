@@ -1,13 +1,19 @@
-.cards__list {
-  @include reset-list;
+.cards {
+  padding-top: 38px;
 }
 
-.cards__add-button,
-.cards__upp-button {
-  @include reset-button;
+.cards__buttons-wrapper {
+  margin-top: 68px;
+  text-align: center;
 }
 
 .cards__add-button {
+  @include reset-button;
+  min-height: 65px;
+  min-width: 380px;
   font-size: 14px;
   line-height: 17px;
+  border: 1px solid $darker-white;
+  border-radius: 10px;
+  cursor: pointer;
 }

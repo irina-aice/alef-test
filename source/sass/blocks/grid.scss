@@ -1,0 +1,19 @@
+.grid {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-top: -23px;
+}
+
+.grid__item {
+  width: 33.333%;
+  padding-left: 20px;
+  padding-top: 23px;
+}
+
+@media (max-width: $width-only-tablet) {
+  .grid__item {
+    width: 50%;
+  }
+}

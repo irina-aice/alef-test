@@ -6,7 +6,9 @@
 @import "global";
 @import "visually-hidden";
 @import "blocks/header";
+@import "blocks/nav-wrapper";
 @import "blocks/nav";
+@import "blocks/logo";
 @import "blocks/main";
 @import "blocks/filter";
 @import "blocks/cards";
@@ -14,3 +16,5 @@
 @import "blocks/about";
 @import "blocks/promo";
 @import "blocks/form";
+@import "blocks/grid";
+@import "blocks/back-to-top";

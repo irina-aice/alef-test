@@ -2,9 +2,24 @@
   @include reset-list;
 }
 
-.form__input {
+.form__list li + li {
+  margin-top: 24px;
+}
+
+.form__input,
+.form__button {
+  min-height: 65px;
   font-size: 14px;
   line-height: 17px;
+  border-radius: 10px;
+}
+
+.form__input {
+  width: 55%;
+  max-width: 300px;
+  margin-right: 8px;
+  padding-left: 33px;
+  border: 0;
 }
 
 .form__input::placeholder {
@@ -13,14 +28,46 @@
 
 .form__button {
   @include reset-button;
-  font-size: 14px;
+  width: 45%;
+  max-width: 250px;
+  margin-left: 8px;
   font-weight: 700;
-  line-height: 17px;
   color: inherit;
   background-color: $blue;
+  cursor: pointer;
+}
+
+.form__label-checkbox {
+  display: flex;
+  cursor: pointer;
+}
+
+.form__checkbox-icon-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: bottom;
+  background-color: $blue;
+  border-radius: 3px;
+}
+
+.form__checkbox-icon-checked {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: none;
+}
+
+.form__label-checkbox input:checked + .form__checkbox-icon-wrapper .form__checkbox-icon-checked {
+  display: block;
 }
 
 .form__checkbox-text {
+  margin-left: 18px;
   font-size: 14px;
   line-height: 17px;
 }

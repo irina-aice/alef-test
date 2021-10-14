@@ -1,17 +1,43 @@
 .filter {
+  display: flex;
+  margin-top: 37px;
   font-size: 18px;
   line-height: 22px;
 }
 
 .filter__text {
-  margin: 0;
+  margin: 0 48px 0 0;
   font-weight: 700;
 }
 
 .filter__list {
   @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter__item + .filter__item {
+  margin-left: 55px;
 }
 
 .filter__button {
   @include reset-button;
+  display: flex;
+  align-items: center;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+}
+
+.filter__button::after {
+  content: "";
+  position: relative;
+  display: block;
+  margin-left: 14px;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon-arrow-down.svg");
 }
