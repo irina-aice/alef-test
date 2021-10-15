@@ -2,5 +2,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 100%;
+}
+
+@media (max-width: $width-only-mobile) {
+  .nav-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .no-js .nav-wrapper {
+    height: auto;
+  }
+
+  .header--opened .nav-wrapper {
+    height: auto;
+  }
 }

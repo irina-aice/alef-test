@@ -12,16 +12,21 @@
     document.documentElement.classList.add('js');
   </script>
 </head>
-<body>
-  <header class="header">
+<body class="js-page page">
+  <header class="js-header header">
     <div class="header__wrapper">
       <div class="header__inner">
-        <div class="nav-wrapper">
+        <div class="header__logo-wrapper">
           <a class="logo" href="/">
             <svg width="78" height="78">
               <use xlink:href="img/sprite.svg#logo"></use>
             </svg>
           </a>
+          <button class="js-header-menu-button header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <div class="nav-wrapper">
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
@@ -38,14 +43,14 @@
               </li>
             </ul>
           </nav>
-        </div>
-        <div class="header__contacts">
-          <ul class="header__contacts-list">
-            <li class="header__contacts-item">
-              <a href="tel:+544349000000">+544 3490 00000</a>
-              <span>Звони скорее!</span>
-            </li>
-          </ul>
+          <div class="header__contacts">
+            <ul class="header__contacts-list">
+              <li class="header__contacts-item">
+                <a href="tel:+544349000000">+544 3490 00000</a>
+                <span>Звони скорее!</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <h2 class="header__title">Найдено 349 котов</h2>
@@ -53,8 +58,10 @@
   </header>
   <main class="main">
     <section class="filter">
-      <h1 class="visually-hidden">Продажа котов</h1>
-      <p class="filter__text">Сортировать по:</p>
+      <div class="filter__text-wrapper">
+        <h1 class="visually-hidden">Продажа котов</h1>
+        <p class="filter__text">Сортировать по:</p>
+      </div>
       <ul class="filter__list">
         <li class="filter__item">
           <button class="filter__button" type="button">Цене</button>
@@ -99,7 +106,7 @@
           <div class="card card--sold">
             <div class="card__image-wrapper">
               <img src="img/cat-2.jpg" alt="Лежащий кот" height="264" width="380">
-              <button class="card__like-button" type="button">
+              <button class="card__like-button" type="button" disabled>
                 <svg height="46" width="47">
                   <use xlink:href="img/sprite.svg#icon-like"></use>
                 </svg>
@@ -249,12 +256,16 @@
       <div class="promo__form">
         <form class="form" action="/" method="post">
           <ul class="form__list">
-            <li>
-              <label class="visually-hidden" for="email">E-mail</label>
-              <input class="form__input" id="email" type="email" name="email" placeholder="Email" required>
-              <button class="form__button" type="submit">Подписаться</button>
+            <li class="form__item form__item--grid">
+              <div class="form__input-wrapper">
+                <label class="visually-hidden" for="email">E-mail</label>
+                <input class="form__input" id="email" type="email" name="email" placeholder="Email" required>
+              </div>
+              <div class="form__button-wrapper">
+                <button class="form__button" type="submit">Подписаться</button>
+              </div>
             </li>
-            <li>
+            <li class="form__item">
               <label class="form__label-checkbox">
                 <input class="visually-hidden" type="checkbox" checked required>
                 <span class="form__checkbox-icon-wrapper">
@@ -280,5 +291,7 @@
       </button>
     </div>
   </div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

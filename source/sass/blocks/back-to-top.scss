@@ -5,6 +5,12 @@
   bottom: 49px;
 }
 
+@media (max-width: $width-only-mobile) {
+  .back-to-top {
+    bottom: 35px;
+  }
+}
+
 .back-to-top__container {
   @include container;
   position: relative;
@@ -31,5 +37,7 @@
 @media (max-width: $width-only-mobile) {
   .back-to-top__button {
     right: 15px;
+    width: 40px;
+    height: 40px;
   }
 }

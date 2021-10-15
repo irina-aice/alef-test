@@ -2,12 +2,49 @@
   @include reset-list;
 }
 
-.form__list li + li {
+.form__item + .form__item {
   margin-top: 24px;
+}
+
+.form__item--grid {
+  display: flex;
+  margin-top: -15px;
+  margin-left: -16px;
+}
+
+@media (max-width: $width-only-tablet) {
+  .form__item--grid {
+    flex-wrap: wrap;
+  }
+}
+
+.form__input-wrapper,
+.form__button-wrapper {
+  padding-top: 15px;
+  padding-left: 16px;
+}
+
+.form__input-wrapper {
+  width: 55%;
+  max-width: 300px;
+}
+
+.form__button-wrapper {
+  width: 45%;
+  max-width: 250px;
+}
+
+@media (max-width: $width-only-tablet) {
+  .form__input-wrapper,
+  .form__button-wrapper {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 .form__input,
 .form__button {
+  width: 100%;
   min-height: 65px;
   font-size: 14px;
   line-height: 17px;
@@ -15,9 +52,6 @@
 }
 
 .form__input {
-  width: 55%;
-  max-width: 300px;
-  margin-right: 8px;
   padding-left: 33px;
   border: 0;
 }
@@ -28,9 +62,6 @@
 
 .form__button {
   @include reset-button;
-  width: 45%;
-  max-width: 250px;
-  margin-left: 8px;
   font-weight: 700;
   color: inherit;
   background-color: $blue;

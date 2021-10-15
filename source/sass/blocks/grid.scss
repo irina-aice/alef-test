@@ -17,3 +17,9 @@
     width: 50%;
   }
 }
+
+@media (max-width: $width-only-mobile) {
+  .grid__item {
+    width: 100%;
+  }
+}

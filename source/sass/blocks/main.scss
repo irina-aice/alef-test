@@ -1,3 +1,10 @@
 .main {
   @include container;
+  padding-top: 37px;
+}
+
+@media (max-width: $width-only-mobile) {
+  .main {
+    padding-top: 20px;
+  }
 }

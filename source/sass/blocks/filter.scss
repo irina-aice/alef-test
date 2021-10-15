@@ -1,8 +1,18 @@
 .filter {
   display: flex;
-  margin-top: 37px;
+  margin-top: -15px;
   font-size: 18px;
   line-height: 22px;
+}
+
+@media (max-width: $width-only-tablet) {
+  .filter {
+    flex-wrap: wrap;
+  }
+}
+
+.filter__text-wrapper {
+  margin-top: 15px;
 }
 
 .filter__text {
@@ -14,10 +24,17 @@
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 15px;
 }
 
 .filter__item + .filter__item {
   margin-left: 55px;
+}
+
+@media (max-width: $width-only-mobile) {
+  .filter__item + .filter__item {
+    margin-left: 20px;
+  }
 }
 
 .filter__button {

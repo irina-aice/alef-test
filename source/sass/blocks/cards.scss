@@ -2,9 +2,21 @@
   padding-top: 38px;
 }
 
+@media (max-width: $width-only-mobile) {
+  .cards {
+    padding-top: 25px;
+  }
+}
+
 .cards__buttons-wrapper {
   margin-top: 68px;
   text-align: center;
+}
+
+@media (max-width: $width-only-mobile) {
+  .cards__buttons-wrapper {
+    margin-top: 25px;
+  }
 }
 
 .cards__add-button {
@@ -16,4 +28,11 @@
   border: 1px solid $darker-white;
   border-radius: 10px;
   cursor: pointer;
+}
+
+@media (max-width: $width-only-mobile) {
+  .cards__add-button {
+    width: 100%;
+    min-width: auto;
+  }
 }
