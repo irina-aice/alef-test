@@ -284,13 +284,22 @@
 
   <div class="back-to-top">
     <div class="back-to-top__container">
-      <button class="back-to-top__button" type="button">
+      <button class="js-back-to-top-button back-to-top__button" type="button">
         <svg height="18" width="18">
           <use xlink:href="img/sprite.svg#icon-arrow-up"></use>
         </svg>
       </button>
     </div>
   </div>
+
+  <div class="js-favorite-message-added favorite-message favorite-message--added">
+    Добавлено в избранное
+  </div>
+
+  <div class="js-favorite-message-removed favorite-message favorite-message--removed">
+    Удалено из изобранного
+  </div>
+
   <template id="card-template">
     <li class="grid__item">
       <div class="js-card card">

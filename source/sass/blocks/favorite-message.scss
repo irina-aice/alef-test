@@ -1,0 +1,28 @@
+.favorite-message {
+  position: fixed;
+  left: 10px;
+  bottom: 49px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  max-width: 180px;
+  min-height: 59px;
+  color: $white;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media (max-width: $width-only-mobile) {
+  .favorite-message {
+    bottom: 35px;
+    min-height: 40px;
+  }
+}
+
+.favorite-message--added {
+  background-color: $green;
+}
+
+.favorite-message--removed {
+  background-color: $red;
+}
