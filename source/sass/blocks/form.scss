@@ -60,12 +60,25 @@
   opacity: 1;
 }
 
+.form__input:focus,
+.form__input:active {
+  outline: 4px solid $blue;
+}
+
 .form__button {
   @include reset-button;
   font-weight: 700;
   color: inherit;
   background-color: $blue;
   cursor: pointer;
+}
+
+.form__button:hover,
+.form__button:focus,
+.form__button:active {
+  outline: 2px solid $blue;
+  color: $blue;
+  background-color: $white;
 }
 
 .form__label-checkbox {
@@ -95,6 +108,11 @@
 
 .form__label-checkbox input:checked + .form__checkbox-icon-wrapper .form__checkbox-icon-checked {
   display: block;
+}
+
+.form__label-checkbox input:focus + .form__checkbox-icon-wrapper,
+.form__label-checkbox input:active + .form__checkbox-icon-wrapper {
+  outline: 2px solid $white;
 }
 
 .form__checkbox-text {

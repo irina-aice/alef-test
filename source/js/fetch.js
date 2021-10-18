@@ -4,6 +4,7 @@
   let data = [];
 
   function onFetchSuccess(json) {
+    const filterData = [];
     data = json;
 
     const cardTemplate = document.querySelector('#card-template').content;
@@ -20,12 +21,11 @@
       }
 
       let isDiscount = false;
-      if(cardData.discount) {
+      if (cardData.discount) {
         isDiscount = true;
       }
 
       const cardWrapper = cardTemplate.cloneNode(true);
-      // const cardElementLi = card.querySelector('.card');
       const card = cardWrapper.querySelector('.js-card');
       const cardImage = card.querySelector('.js-card-image');
       const cardLikeButton = card.querySelector('.js-card-like-button');
@@ -67,11 +67,25 @@
 
       cardButton.textContent = cardButtonText;
 
-      // window.gsap.fromTo(cardElementLi, {autoAlpha: 0, scale: 0.8}, {autoAlpha: 1, scale: 1, duration: 0.5});
+      // window.window.gsap.fromTo(cardElementLi, {autoAlpha: 0, scale: 0.8}, {autoAlpha: 1, scale: 1, duration: 0.5});
 
       cardList.appendChild(cardWrapper);
+
+      filterData.push({
+        price: +cardData.price.match(/\d/g).join(''),
+        age: +cardData.age.match(/\d/g).join(''),
+        element: card.parentNode,
+      });
     }
+
+    const cardAdded = new CustomEvent('card-added', {
+      detail: filterData,
+    });
+
+    cardList.dispatchEvent(cardAdded);
   }
+
+  const cardAddButton = document.querySelector('.js-cards-add-button');
 
   function fetchData(onSuccess) {
     fetch(
@@ -86,11 +100,14 @@
       }
     }).then((json) => {
       onSuccess(json);
+      cardAddButton.disabled = false;
+      cardAddButton.textContent = cardAddButton.getAttribute('data-default-text');
     });
   }
 
-  const cardAddButton = document.querySelector('.js-cards-add-button');
   cardAddButton.addEventListener('click', () => {
+    cardAddButton.disabled = true;
+    cardAddButton.textContent = cardAddButton.getAttribute('data-load-text');
     fetchData(onFetchSuccess);
   });
 })();

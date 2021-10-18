@@ -26,6 +26,8 @@
   height: 59px;
   background-color: $blue;
   cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
 }
 
 @media (max-width: $width-only-tablet) {
@@ -40,4 +42,8 @@
     width: 40px;
     height: 40px;
   }
+}
+
+.back-to-top__button:hover {
+  outline: 2px solid $black;
 }

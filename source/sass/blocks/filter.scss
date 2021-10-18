@@ -57,4 +57,25 @@
   height: 15px;
   background-repeat: no-repeat;
   background-image: url("../img/icon-arrow-down.svg");
+  visibility: hidden;
+  opacity: 0;
+}
+
+.filter__button--asc::after,
+.filter__button--desc::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.filter__button--asc::after {
+  transform: rotate(180deg);
+}
+
+.filter__button:hover,
+.filter__button:active {
+  color: $blue;
+}
+
+.filter__button:focus {
+  outline: 1px solid $black;
 }

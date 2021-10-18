@@ -13,16 +13,30 @@
   position: absolute;
   top: 34px;
   right: 32px;
+  color: $pale-white;
   cursor: pointer;
+  transition: color 0.35s ease-in-out;
+}
+
+.card__like-button[data-state] {
+  color: $pale-red;
 }
 
 .card__like-button:disabled {
   cursor: not-allowed;
 }
 
+.card__like-button:hover {
+  color: $white;
+}
+
+.card__like-button[data-state]:hover {
+  color: $red;
+}
+
 .card__like-button svg {
   display: block;
-  color: $pale-white;
+  color: currentColor;
 }
 
 .card__discount {
@@ -103,4 +117,12 @@
 
 .card--sold .card__like-button svg {
   color: $white;
+}
+
+.card__button:hover,
+.card__button:focus,
+.card__button:active {
+  outline: 2px solid $blue;
+  color: $blue;
+  background-color: $white;
 }

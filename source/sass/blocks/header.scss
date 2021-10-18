@@ -98,7 +98,7 @@
     content: "";
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 8px;
     width: 24px;
     height: 1px;
     background-color: $white;
@@ -109,8 +109,8 @@
   .header--opened .header__toggle::after {
     content: "";
     position: absolute;
-    top: 18px;
-    right: 10px;
+    top: 19px;
+    right: 8px;
     width: 24px;
     height: 1.5px;
     background-color: $white;
@@ -127,6 +127,15 @@
   .no-js .header__toggle, {
     display: none;
   }
+}
+
+.header__toggle:hover,
+.header__toggle:active {
+  opacity: 0.5;
+}
+
+.header__toggle:focus {
+  outline: 2px solid $white;
 }
 
 @media (max-width: $width-only-mobile) {
@@ -167,6 +176,15 @@
     font-size: 24px;
     line-height: 28px;
   }
+}
+
+.header__contacts-item a:hover,
+.header__contacts-item a:active {
+  opacity: 0.5;
+}
+
+.header__contacts-item a:focus {
+  outline: 1px solid $white;
 }
 
 .header__contacts-item span {

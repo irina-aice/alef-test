@@ -26,7 +26,7 @@
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
-        <div class="nav-wrapper">
+        <div class="js-nav-wrapper nav-wrapper">
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
@@ -64,10 +64,10 @@
       </div>
       <ul class="filter__list">
         <li class="filter__item">
-          <button class="filter__button" type="button">Цене</button>
+          <button class="js-filter-button filter__button" data-type="price" type="button">Цене</button>
         </li>
         <li class="filter__item">
-          <button class="filter__button" type="button">Возрасту</button>
+          <button class="js-filter-button filter__button" data-type="age" type="button">Возрасту</button>
         </li>
       </ul>
     </section>
@@ -103,7 +103,7 @@
           </div>
         </li>
         <li class="grid__item">
-          <div class="card card--sold">
+          <div class="js-card card card--sold">
             <div class="card__image-wrapper">
               <img class="js-card-image" src="img/cat-2.jpg" alt="Лежащий кот" height="264" width="380">
               <button class="js-card-like-button card__like-button" type="button" disabled>
@@ -216,7 +216,7 @@
           </div>
         </li>
         <li class="grid__item">
-          <div class="card card--sold">
+          <div class="js-card card card--sold">
             <div class="card__image-wrapper">
               <img class="js-card-image" src="img/cat-2.jpg" alt="Лежащий кот" height="264" width="380">
               <button class="js-card-like-button card__like-button" type="button" disabled>
@@ -245,7 +245,9 @@
         </li>
       </ul>
       <div class="cards__buttons-wrapper">
-        <button class="cards__add-button js-cards-add-button" type="button">Показать еще 20</button>
+        <button class="cards__add-button js-cards-add-button"
+                data-default-text="Показать еще 20" data-load-text="Загрузка..."
+                type="button">Показать еще 20</button>
       </div>
     </section>
     <section class="promo">
@@ -281,7 +283,6 @@
       </div>
     </section>
   </main>
-
   <div class="back-to-top">
     <div class="back-to-top__container">
       <button class="js-back-to-top-button back-to-top__button" type="button">
@@ -297,7 +298,7 @@
   </div>
 
   <div class="js-favorite-message-removed favorite-message favorite-message--removed">
-    Удалено из изобранного
+    Удалено из избранного
   </div>
 
   <template id="card-template">

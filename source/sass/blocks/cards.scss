@@ -36,3 +36,10 @@
     min-width: auto;
   }
 }
+
+.cards__add-button:hover,
+.cards__add-button:focus,
+.cards__add-button:active {
+  color: $white;
+  background-color: $blue;
+}
