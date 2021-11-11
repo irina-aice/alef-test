@@ -152,7 +152,7 @@
 
   function fetchData(onSuccess) {
     fetch(
-      '../data.json',
+      'data.json',
       {
         method: 'GET',
         cache: 'no-cache',
